@@ -1,68 +1,96 @@
-*{
-    margin:0;
-    padding:0;
-  }
-  
-  header{
-    border-bottom: 1px solid #1b85dc;
-    height: 10vh;
-    display:flex;
-  }
-  
-  #logo{
-    width: 30vw;
-    height: 10vh;
-  }
-  
-  #logo img{
-    height: 8vh;
-  }
-  #display{
-    width: 50vw;
-  }
-  
-  #user{
-    width: 20vw;
-  }
-  
-  main{
-    margin: 2vh 2vw;
-    min-height: 80vh;
-  }
-  
-  #notes{
-    display: flex; /*distribuir de forma igual*/
-    flex-wrap: wrap; /*os itens vão descer pra linha de baixo se não tiver espaço*/
-    justify-content: space-around; 
-  }
-  
-  .card a{
-    text-decoration: none;
-  }
-  
-  #modal-view{
-    border:1px solid #1b85dc;
-    position: absolute;
-    display:none;
-    width: 90vw;
-    padding:10px;
-   
-  }
-  
-  #close-modal{
-    float:right;
-  }
-  
-  #modal{
-    border:1px solid #1b85dc;
-    position: absolute;
-    padding:2vh 2vw;
-    display:none;
-    width: 90vw;
-  }
-  
-  #controls-note{
-    display:flex;
-    gap:10px;
-  }
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+header {
+  background-color: #7cb2ef;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header #logo img {
+  width: 40px;
+  height: 40px;
+}
+
+h1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#add-note {
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+.card h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #666;
+}
+
+#modal-view {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+#modal-view #close-modal {
+  text-align: right;
+}
+
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  cursor: pointer;
+}
+
+#logo img {
+  width: 100px;
+  height: auto;
+  display: block; 
+  margin: 0 auto; 
+}
+
